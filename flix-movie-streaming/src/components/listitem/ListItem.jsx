@@ -23,17 +23,17 @@ function ListItem({index}) {
         />
     <div className="itemInfo">
       <div className="icons">
-        <PlayArrow />
-        <Add />
-        <ThumbUpAltOutlined />
-        <ThumbDownOutlined />
+        <PlayArrow className="icon"/>
+        <Add className="icon"/>
+        <ThumbUpAltOutlined className="icon"/>
+        <ThumbDownOutlined className="icon"/>
       </div>
       <div className="itemInfoTop">
         <span>1 hour 14 mins</span>
         <span className = "limit">+16</span>
         <span>1999</span>
       </div>
-      <div className="desription">
+      <div className="description">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
       labore et dolore magna aliqua. 
       </div>
