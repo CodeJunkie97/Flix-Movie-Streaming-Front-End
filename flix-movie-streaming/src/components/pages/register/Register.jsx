@@ -28,12 +28,12 @@ export default function Register(){
                 </p>{
                     !email ? (
                         <div className="input">
-                        <input type="email" placeholder="emailAddress" ref = {emailRef}></input>
+                        <input type="email" placeholder="Email Address" ref = {emailRef}></input>
                         <button className="registerButton" onClick = {handleStart}>Get Started</button>
                     </div>
                     ) : (
                         <form className="input">
-                        <input type="password" placeholder="password" ref = {passwordRef}></input>
+                        <input type="password" placeholder="Password" ref = {passwordRef}></input>
                         <button className="registerButton" onClick = {handleFinish}>Start Membership</button>
                     </form>
                     )
