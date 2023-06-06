@@ -1,7 +1,26 @@
 import './featured.scss'
 import PlayArrow from '@mui/icons-material/PlayArrow'
 import InfoOutlined from '@mui/icons-material/InfoOutlined'
+import { useEffect, useState } from 'react';
+import axios from 'axios';
 function Featured({type}) {
+    const [content, setContent] = useState({});
+
+    useEffect(() => {
+        const getRandomContent = async () =>{
+            try{
+                const res = await axios.get("/movies/random?type=${type}",
+                { headers: {
+                    token:
+                    "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NzYzMzc2OWI4NDFhNDliYWVmMmU1NCIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY4NTk5MjY2NCwiZXhwIjoxNjg2NDI0NjY0fQ.9kfZpzIxnMzgsORQlizDpaXKSUNR3hYgPvs0ycaQz1w"
+                } });
+                setContent(res.data[0]);
+            }catch(err){
+                console.log(err);
+            }
+        }
+        getRandomContent();
+    },[])
   return (
     <div className = "featured">
         {type && (
@@ -26,18 +45,16 @@ function Featured({type}) {
             </div>
         )}
         <img 
-            src = "https://th.bing.com/th/id/OIP.4oBn_yCg_ZvGg2ENIW8s9gHaDt?pid=ImgDet&rs=1"
+            src = {content.image}
             alt = ""
         />
         <div className="info">
             <img
-            src = "https://www.themoviedb.org/t/p/w1280/diwwHcWgTMdb7hXbWVwrRluuoBL.png"
+            src = {content.imageTitle}
             alt = ""
             />
         <span className = "desc">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
-        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
-        
+        {content.description}
         </span>
         <div className = "buttons">
             <button className = "play">
