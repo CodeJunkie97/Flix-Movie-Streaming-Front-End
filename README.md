@@ -22,7 +22,7 @@ in the process of making changes so that it is. My ideal admin suite has User Da
 long are they engaged with each content. I then want to use this data to create a AI Recommendation model that can reccomend the best content for users based on the user history. I am in the process of learning 
 AI, Data Modeling, and Data Science and this seemed like a challenge where I could learn a lot and build cool things so I am currently in the process of this journey as you read this.
 
-# Flix-Movie-Streaming-Front-End Local Runbook Documentation.
+# Flix-Movie-Streaming-Back-End Local Runbook Documentation.
 [Backend/API Repository Link] (https://github.com/CodeJunkie97/Flix-Movie-Streaming-Back-End)
 
 # Steps to run on localhost:
