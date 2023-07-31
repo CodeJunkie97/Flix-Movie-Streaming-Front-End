@@ -26,7 +26,7 @@ AI, Data Modeling, and Data Science and this seemed like a challenge where I cou
 [Backend/API Repository Link] (https://github.com/CodeJunkie97/Flix-Movie-Streaming-Back-End)
 
 # Steps to run on localhost:
-1. Clone both this backend repository and the linked front end repository above. You will need both to be running simultaneously for the application to work properly. 
+1. Clone both this front end repository and the linked back end repository above. You will need both to be running simultaneously for the application to work properly. 
 2. After you have both cloned, navigate into the back end server repository and the api folder. 
 3. Once in the API folder in a terminal, run the command 'npm install' to install all of the packages needed to run the backend server. 
 4. Once the libraries have finished installing, you should then run the command 'npm start' to start the backend development server. From the command terminal, you will recieve two output messages to let you know the backend server is running and that the connection to the database was successful. 
